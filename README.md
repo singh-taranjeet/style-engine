@@ -13,16 +13,19 @@ npm install --save @minimal_ui/style-engine
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
+import React from 'react'
 
-import MyComponent from '@minimal_ui/style-engine'
-import '@minimal_ui/style-engine/dist/index.css'
+import { Root } from '@minimal_ui/style-engine'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const App = () => {
+  return <Root tag={"h1"} styles={{
+    "color": "#e91e63"
+  }}>
+    Hello Styled component
+  </Root>
 }
+
+export default App
 ```
 
 ## License

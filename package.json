@@ -1,6 +1,6 @@
 {
   "name": "@minimal_ui/style-engine",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Create efficient styles with react",
   "author": "singh-taranjeet",
   "license": "MIT",
@@ -14,6 +14,7 @@
   "scripts": {
     "build": "rollup -c",
     "start": "rollup -c --watch",
+    "pub": "npm version patch && npm run build && npm publish --access=public",
     "prepare": "run-s build",
     "test": "run-s test:unit test:lint test:build",
     "test:build": "run-s build",
