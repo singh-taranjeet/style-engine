@@ -1,10 +1,13 @@
 import React from 'react'
 
-import { ExampleComponent } from '@minimal_ui/style-engine'
-import '@minimal_ui/style-engine/dist/index.css'
+import { Root } from '@minimal_ui/style-engine'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return <Root tag={"h1"} styles={{
+    "color": "#e91e63"
+  }}>
+    Hello
+  </Root>
 }
 
 export default App

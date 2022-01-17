@@ -4,7 +4,7 @@
   "description": "Create efficient styles with react",
   "author": "singh-taranjeet",
   "license": "MIT",
-  "repository": "",
+  "repository": "https://github.com/singh-taranjeet/style-engine",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
@@ -12,8 +12,8 @@
     "node": ">=10"
   },
   "scripts": {
-    "build": "microbundle-crl --no-compress --format modern,cjs",
-    "start": "microbundle-crl watch --no-compress --format modern,cjs",
+    "build": "rollup -c",
+    "start": "rollup -c --watch",
     "prepare": "run-s build",
     "test": "run-s test:unit test:lint test:build",
     "test:build": "run-s build",
@@ -55,7 +55,14 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "^3.4.1",
-    "typescript": "^3.7.5"
+    "typescript": "^3.7.5",
+    "postcss": "^8.4.5",
+    "rollup": "^2.59.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.1",
+    "rollup-plugin-svg": "^2.0.0",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "sass": "^1.44.0"
   },
   "files": [
     "dist"
