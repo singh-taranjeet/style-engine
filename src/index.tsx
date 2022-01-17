@@ -2,7 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { StyleListType } from './utils/interface';
 import { createStyleSheet, isObject, getId } from './utils';
 
-export const Root = (props: any) => {
+interface  RootProps extends React.HTMLProps<HTMLDivElement> {
+  tag?: string,
+  styles?: object
+}
+
+export const Root = (props: RootProps) => {
 
   // store all the list of styles with number of styles and json string
   const [styleList, setStyleList] = useState<StyleListType[]>([]);
@@ -119,3 +124,5 @@ export const Root = (props: any) => {
     tag: undefined
   });
 }
+
+export {createStyleSheet};

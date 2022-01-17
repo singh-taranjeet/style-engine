@@ -1,5 +1,4 @@
 import { CreateStyleSheetType } from './interface'
-import { rootStyleConstants } from '../styles/constants'
 
 export function getId(length = 7) {
   let result = 'm'
@@ -67,10 +66,3 @@ export function createStyleSheet(data: CreateStyleSheetType) {
   head.appendChild(styleSheet)
   styleSheet.appendChild(document.createTextNode(css))
 }
-
-// Create the default variables
-createStyleSheet({
-  styles: {
-    ':root': rootStyleConstants
-  }
-})
